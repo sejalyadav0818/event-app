@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../assets/style/demo.css";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/esm/Button";
-import RadioButtons from "../components/RadioButtons";
 import * as formik from "formik";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import VadlidationSchema from "../validationSchemas/VadlidationSchema";
 import { useAuth } from "../Context/AuthContext";
@@ -17,13 +16,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Login = () => {
   const { Formik } = formik;
   const Navigate = useNavigate();
-  const { isLogin, logIn, logOut } = useAuth();
+  // const { isLogin, logIn, logOut } = useAuth();
 
   const handleFormSubmit = (values, { setSubmitting }) => {
     const { email, password } = values;
     const registeredUsers = JSON.parse(localStorage.getItem("FormData")) || [];
     const user = registeredUsers.filter(
-      (u) => u.email == email && u.password == password
+      (u) => u.email === email && u.password === password
     );
     if (user) {
       const email = user[0].email;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CalenderScliderByMonth from "./Pages/CalenderScliderByMonth";
 import CalenderScliderByWeek from "./Pages/CalenderScliderByWeek";
 import CalenderScliderByDay from "./Pages/CalenderScliderByDay";

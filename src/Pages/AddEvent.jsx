@@ -6,12 +6,10 @@ import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/esm/Button";
 import RadioButtons from "../components/RadioButtons";
 import * as formik from "formik";
-import * as yup from "yup";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "../App.css";
 import {
-  getCharacterValidationError,
   validationSchema,
 } from "../validationSchemas/eventSchema";
 const AddEvent = () => {

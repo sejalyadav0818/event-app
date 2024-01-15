@@ -72,7 +72,7 @@ const CalenderScliderByWeek = () => {
   const monthName = currentDate.toLocaleString("default", { month: "long" });
   const translatedMonthName = t(`${monthName}`);
 
-  const weeks = chunkArray(days, 7);
+  // const weeks = chunkArray(days, 7);
   const getCurrentWeekDates = (date) => {
     const currentDate = date.getDay();
     let weekStart = new Date(date);

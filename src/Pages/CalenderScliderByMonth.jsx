@@ -18,7 +18,7 @@ import { useAuth } from "../Context/AuthContext";
 const { Formik } = formik;
 
 const CalenderScliderByMonth = () => {
-  const { isLogin, logOut } = useAuth();
+  const { isLogin } = useAuth();
   const Navigate = useNavigate();
   const token = JSON.parse(localStorage.getItem("token")) || []
   const [isModalOpen, setIsModalOpen] = useState(false);
